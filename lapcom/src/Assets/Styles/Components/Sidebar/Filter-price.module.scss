@@ -1,0 +1,23 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.sidebar-filter-price{
+    margin-bottom: 60px;
+    
+    .price-slider-amount{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        p{
+            font-size: 16px;
+            margin: 0;
+            color: #99a9b5;
+            font-family: $font--seconde;
+            span{
+                color: #5f727f;
+            }
+        }
+    }
+}

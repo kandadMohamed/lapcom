@@ -1,0 +1,145 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.check-out-order{
+
+    &__payment{
+        margin-top: 30px;
+        background-color: #f4f6f7;
+
+        &-pattern{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 5px;
+            
+            &>div{
+                width: 13px;
+                height: 13px;
+                background-color: white;
+                border-radius: 50%;
+            }
+        }
+        &-details{
+            padding: 10px 15px;
+
+            table{
+                width: 100%;
+
+                thead{
+                    border-bottom: 3px solid $color--border;
+                    
+                    td{
+                        font-size: 28px;
+                        color: #3c3950;
+                        font-family: $font--main;
+                        font-weight: 300;
+                        padding-bottom: 10px;
+
+                        &:last-of-type{
+                            text-align: end;
+                        }
+                    }
+                }
+                tbody{
+                    border-bottom: 3px solid $color--border;
+
+                    tr{
+                        td{
+                            padding: 10px 0;
+                            height: 82px;
+                            .order-product-img{
+                                display: inline-block;
+                                width: 50px;
+                                margin-right: 10px;
+                                
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            h4{
+                                margin: 0;
+                                font-size: 20px;
+                                color: #3c3950;
+                                font-family: $font--seconde;
+                                font-weight: 300;
+                            }
+                            p{
+                                display: inline-block;
+                                font-size: 16px;
+                                font-family: $font--seconde;
+                                font-weight: 500;
+                                color: #5f727f;
+
+                                span{
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                }
+                                &::first-letter{
+                                    text-transform: uppercase;
+                                }
+                            }
+                            &:last-of-type{
+                                text-align: end;
+                                font-size: 22px;
+                                font-family: $font--seconde;
+                                font-weight: 300;
+                            }
+                            &.total{
+                                font-size: 30px;
+                                font-weight: 300;
+                            }
+                        }
+                        &:not(:last-of-type){
+                            border-bottom: 1px solid $color--border;
+                        }
+                    }
+                }
+                tfoot{
+                    tr{
+                        td{
+                            padding: 10px 0;
+                            height: 82px;
+
+                            input{
+
+                                &[type='radio']{
+                                    margin-right: 10px;
+                                    accent-color: rgb(0, 0, 0);
+                                    position: relative;
+                                    cursor: pointer;
+                                    border-color: 1px solid red;
+                                }
+                                &[type='number']::-webkit-outer-spin-button,
+                                &[type='number']::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+                            }
+                            label{
+                                font-size: 16px;
+                                color: #5f727f;
+                                font-family: $font--seconde;
+                            }
+                            button{
+                                width: 236px;
+                                height: 50px;
+                                font-size: 18px;
+
+                                svg{
+                                    font-size: 25px;
+                                    margin-right: 10px;
+                                }
+                            }
+                            .payment-online__content{
+                                margin-top: 15px;
+                            }
+                        }
+                        &:not(:last-of-type){
+                            border-bottom: 1px solid $color--border;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

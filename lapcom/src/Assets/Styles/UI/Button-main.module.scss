@@ -1,0 +1,41 @@
+@import '../Helpers/Mixin.scss';
+@import '../Helpers/Variables.scss';
+
+
+.btn-variante{
+    height: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 18px;
+    
+    &.btn-gray{
+        @include buttonColor($color--gray__therd);
+
+        &__outline{
+            @include buttonColor($color--gray__therd,true);
+        }
+    }
+    &.btn-blue{
+        @include buttonColor($color--seconde);
+        
+        &__outline{
+            @include buttonColor($color--seconde,true);
+        }
+    }
+    &.btn-black{
+        @include buttonColor($color--black__seconde,false);
+        
+        &__outline{
+            @include buttonColor($color--black__seconde,true);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import '../Helpers/Variables.scss';
+
+.alert-message{
+    width: 100%;
+    background-color: $color--error;
+    color: white;
+    display: flex;
+    align-items: center;
+    .message-desc{
+        padding: 20px;
+        overflow: hidden;
+        word-wrap: break-word;
+
+        p{
+            margin: 0;
+        }
+    }
+}

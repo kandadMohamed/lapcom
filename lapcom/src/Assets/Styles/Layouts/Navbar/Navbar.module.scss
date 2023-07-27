@@ -1,0 +1,23 @@
+@import '../../Helpers/Variables.scss';
+@import '../../Helpers/Mixin.scss';
+
+.navbar{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s !important;
+    z-index: 1111;
+    padding: 33px 0;
+
+    &.nav-fixed{
+        background-color: $color--main;
+    }
+    &__brand{
+        width:132px !important;
+
+        img{
+            width: 31px;
+        }
+    }
+}

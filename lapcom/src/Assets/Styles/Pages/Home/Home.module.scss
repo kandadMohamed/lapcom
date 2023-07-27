@@ -1,0 +1,168 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.header-home{
+    height: 830px !important;
+    background-color: red;
+    
+    &__desc{
+        position: absolute;
+        right: 0;
+        bottom: 200px;
+        text-align: end;
+        color: $color--main;
+        padding: 0 70px;
+
+        h2{
+            font-size: 94px;
+            font-weight: 300 !important;
+        }
+        h3{
+            font-size: 73px;
+            font-weight: 700;
+        }
+        @include For-Desktop(max-width){
+            h2{
+                font-size: 8vw;
+            }
+            h3{
+                font-size: 53px;
+            }
+        }
+
+        button{
+            width: 200px;
+            display: inline-block;
+            border: none;
+            outline: none;
+            background-color: $color--gray;
+            color: white;
+            padding: 10px;
+        }
+
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: $color--seconde;
+        }
+        &::before{
+            left: 0;
+            width: 5px;
+            height: 90px;
+        }
+        &::after{
+            top: 20px;
+            right: 0;
+            width: 20px;
+            height: 170px;
+            @mixin For-Extra-Mobile{
+                height: 150px !important;
+            }
+            @include For-Mobile(max-width){
+                height: 150px; 
+                top: 10px;
+            }
+            @media screen and (max-width: 595px) {
+                height: 190px;
+            }
+        }
+        @include For-Desktop(max-width){
+            width: 100%;
+            bottom: 180px;
+        }
+    }
+    @include For-Desktop(max-width){
+        height: 700px !important;
+    }
+}
+.home-content{
+
+    
+    .column-product{
+        // height: 595px;
+        padding: 0;
+        position: relative;
+        // border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        &>a{
+            text-decoration: none;
+            position: absolute;
+            bottom: 55px;
+            left: 55px;
+
+            h2{
+                font-size: 50px;
+                color: rgb(255, 255, 255);
+                font-weight: 700;
+                letter-spacing: 2.5px;
+
+                &::first-letter{
+                    text-transform: uppercase;
+                }
+            }
+            span{
+                font-size: 24px;
+                color: $color--gray;
+                font-weight: 700;
+                letter-spacing: 1.2px;
+            }
+        }
+        @include For-Mobile(max-width){
+            height: 63vw;
+        }
+        @include For-Mobile(min-width){
+            height: 42vw;
+        }
+        @include For-Tablet(min-width){
+            height: 52vw;
+        }
+        @include For-Desktop(min-width){
+            height: 55vw;
+        }
+        @include For-X-Large(min-width){
+            height: 31.5vw !important;
+        }
+        &.categorie{
+            border-left: 1px solid black;
+            @include For-Extra-Mobile{
+                height: 66vw;
+                &>a{
+                    bottom: 13px;
+                    left: 47px;
+                    h2{
+                        font-size: 7vw;
+                    }
+                    span{
+                        font-size: 4vw;
+                    }
+                }
+            }
+            
+            @include For-Mobile(min-width){
+                height: 55vw;
+            }
+        }
+    }
+    .loading{
+        .column-product{
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            background-color: $color--gray__fourth;
+
+            &.products{
+                display: flex;
+                justify-content: center;
+                
+                
+            }
+        }
+    }
+}
+
+

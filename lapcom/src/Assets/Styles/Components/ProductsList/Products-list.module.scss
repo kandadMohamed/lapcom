@@ -1,0 +1,71 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+
+.product-sort{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: $color--gray__fourth;
+    margin-bottom: 20px;
+
+    @include For-Desktop(max-width){
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .select{
+        width: 200px;
+        margin: 0 !important;
+
+        .css-qc6sy-singleValue{
+            font-size: 10px !important;
+        }
+    }
+
+    &>div.showing-on-page{
+        display: flex;
+        align-items: center;
+        @include For-Desktop(max-width){
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p{
+            margin: 0;
+            margin-right: 5px;
+            font-family: $font--seconde;
+            color: $color--gray__therd;
+        }
+    }
+}
+
+.container-paginate{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    li{
+        width: 40px;
+        height: 40px;
+        background-color: $color--gray__fourth;
+        font-size: 16px;
+        margin-left: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            color: $color--gray__therd !important;
+            font-weight: 600;
+        }
+    }
+}

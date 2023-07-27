@@ -1,0 +1,11 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+main.check-out-main-content{
+    margin: 50px;
+    padding: 50px 0;
+
+    .check-out-details{
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,57 @@
+@import 'Variables.scss';
+
+// ? Mixin For Media Query
+@mixin For-Extra-Mobile {
+    @media screen and (max-width: $small) {
+        @content
+    }
+}
+@mixin For-Mobile($width) {
+    @media screen and ($width: $medium) {
+        @content
+    }
+}
+@mixin For-Tablet($width) {
+    @media screen and ($width: $large) {
+        @content
+    }
+}
+@mixin For-Desktop($width) {
+    @media screen and ($width: $large) {
+        @content
+    }
+}
+@mixin For-X-Large($width) {
+    @media screen and ($width: $x--large) {
+        @content
+    }
+}
+@mixin For-XX-Large($width) {
+    @media screen and ($width: $xx--large) {
+        @content
+    }
+}
+
+// ? Mixin For Button Color
+@mixin buttonColor($color,$outLine: false) {
+    transition: .3s;
+    border-radius: 4px;
+    border: 2px solid $color;
+
+    @if $outLine{
+        color: $color;
+        background-color: transparent;
+        &:hover{
+            background-color: $color;
+            color: white;
+        }
+    }@else{
+        background-color: $color;
+        color: white;
+        &:hover{
+            color: $color;
+            background-color: transparent;
+        }
+    }
+}
+

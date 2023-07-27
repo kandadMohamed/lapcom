@@ -1,0 +1,144 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.product-info{
+
+    .product-title{
+        display: flex;
+        justify-content: space-between;
+        h3{
+            font-size: 28px;
+            font-weight: 300;
+            font-family: $font--heading__main;
+            
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+        .btn-style{
+            width: 30px;
+            height: 30px;
+            padding: 0;
+        }
+    }
+    .line{
+        width: 100%;
+        height: 4px;
+        margin-top: 15px;
+        margin-bottom: 22px;
+        border-top: 1px solid $color--border;
+        border-bottom: 1px solid $color--border;
+    }
+    .price{
+        font-size: 28px;
+        color: #3c3950;
+        font-family: $font--seconde;
+        font-weight: 300;
+
+        .prix-promotion{
+            color: $color--red__error;
+            font-weight: 600;
+            font-size: 22px;
+            text-decoration: line-through;
+        }
+    }
+    .filter__color{
+        display: flex;
+        align-items: center;
+
+        p{
+            font-size: 16px;
+            font-family: $font--seconde;
+            color: rgb(33, 33, 33);
+            margin: 0 10px 0 0;
+        }
+    }
+    .btn-action{
+        display: flex;
+        margin-top: 30px;
+        
+        input{
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: $color--gray__fourth;
+            margin-right: 20px;
+            border: none;
+            outline: none;
+            text-align: center;
+            font-family: $font--seconde;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        button{
+            width: 146px;
+            height: 40px;
+        }
+    }
+    .categorie{
+        margin-top: 20px;
+
+        p{
+            font-family: $font--seconde;
+            span{
+                color: $color--gray__therd;
+            }
+            a{
+                text-decoration: none;
+                margin-left: 9px;
+                color: $color--seconde;
+            }
+        }
+    }
+    .desc-review{
+        margin-top: 40px;
+        .desc-review__action{
+            display: flex;
+            // border-bottom: 2px solid $color--border;
+
+            &>div{
+                font-size: 15px;
+                font-family: $font--seconde;
+                font-weight: 300;
+                margin-right: 15px;
+                padding: 12px 17px;
+                cursor: pointer;
+                background-color: $color--gray__fourth;
+                border: 1px solid $color--border;
+                border-bottom-color: transparent;
+                color: rgb(43, 43, 43);
+                font-family: $font--main;
+
+                @include For-Tablet(max-width){
+                    font-size: 12px;
+                    padding: 10px 15px;
+                    margin-right: 10px;
+                }
+
+                &.active{
+                    // color: $color--seconde;
+                    position: relative;
+                    border-bottom: 1px solid white;
+    
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                        width: 100%;
+                        height: 2px;
+                        background-color: white;
+                    }
+                }
+            }
+            
+        }
+    }
+    .tabs-content{
+        border: 1px solid $color--border;
+    }
+}

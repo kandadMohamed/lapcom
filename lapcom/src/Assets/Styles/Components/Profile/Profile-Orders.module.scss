@@ -1,0 +1,106 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.profile-order-content{
+    
+    table.orders{
+        width: 100%;
+        width: 100%;
+        border: 1px solid $color--gray__heading__table;
+
+        tr{
+
+            &.heading{
+                background-color: $color--gray__heading__table !important;
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+                th{
+                    padding: 8px 0;
+                    padding-left: 10px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-bottom: 1px solid $color--gray__heading__table;
+                color: #929ea7;
+
+                &:nth-of-type(even){
+                    background-color: $color--gray__fourth;
+                }
+                td{
+                    padding: 20px 0;
+                    text-align: left;
+                    padding-left: 10px;
+                    font-family: $font--seconde;
+
+                    span{
+                        padding: 5px 13px !important;
+                        border-radius: 11px;
+                        font-size: 13px;
+
+                        @each $statusItem, $statusBg in $color--status {
+                            &.#{$statusItem} {
+                                background-color: map-get($statusBg, backGround) !important;
+                                color: map-get($statusBg, text) !important;
+                            }
+                        }
+                    }
+                    &.action{
+                        a.link-details{
+                            width: 58px !important;
+                            display: inline-block;
+                            border-radius: 20px;
+                            padding: 0;
+                            text-align: center;
+                            padding-top: 4px;
+                            margin-right: 10px;
+                            text-transform: lowercase;
+                            font-weight: 600;
+                            border-width: 1px;
+
+                            &::first-letter{
+                                text-transform: uppercase;
+                            }
+                        }
+                        .more-action{
+                            display: inline;
+                            &>button{
+                                background-color: transparent !important;
+                                border: 1px solid $color--seconde;
+                                color: $color--gray__heading__table;
+                                border-radius: 13px;
+                                padding: 2px 10px;
+                                transition: .4s;
+
+                                &::after{
+                                    display: none !important;
+                                }
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                                &:hover{
+                                    background-color: $color--seconde !important;
+                                    color: white;
+                                }
+                            }
+                            &>div{
+                                border: none;
+                                box-shadow: 0 -3px 23px rgb(0, 0, 0,6%);
+                                a{
+                                    font-family: $font--seconde !important;
+                                    color: #393939;
+
+                                    &:last-of-type{
+                                        color: $color--red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

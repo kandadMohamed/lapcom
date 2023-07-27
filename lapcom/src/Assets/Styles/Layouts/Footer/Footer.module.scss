@@ -1,0 +1,58 @@
+@import  '../../Helpers/Mixin.scss';
+@import  '../../Helpers/Variables.scss';
+
+footer{
+    padding: 10px 0;
+    background-color: $color--black;
+    color: white;
+
+    // width: 100%;
+    // position: absolute;
+    // left: 0;
+    // bottom: 0;
+
+    .copy-right{
+        @include For-Desktop(max-width){
+            text-align: center;
+        }
+        p{
+            margin: 0;
+            font-size: 13.6px;
+            font-weight: 500;
+            font-family: $font--paragraph__main;
+        }
+    }
+    .footer-links{
+        display: flex;
+        align-items: center;
+        @include For-Desktop(max-width){
+            margin: 20px 0;
+        }
+        ul{
+            width: 100%;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            
+            li{
+                width: calc(100%/4);
+                text-align: center;
+
+                &:not(:first-of-type){
+                    border-left: 1px solid #686868;
+                }
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 13.6px;
+                font-weight: 500;
+                font-family: $font--paragraph__main;
+            }
+        }
+
+    }
+}

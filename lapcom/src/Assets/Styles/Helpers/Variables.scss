@@ -1,0 +1,52 @@
+
+// ? Color Variables
+$color--main: #fff;
+$color--seconde: #37bdd3;
+$color--black: #212227;
+$color--black__seconde: #3c3950;
+$color--gray: #67676e;
+$color--gray__seconde: #f0f3f2;
+$color--gray__therd: #99a9b5;
+$color--gray__fourth: #f4f6f7;
+$color--red: #ED4337;
+$color--red__error: #920000;
+$color--gray__heading: #5f727f;
+$color--gray__heading__table: #b6c6c9;
+$color--button__gray: $color--gray;
+$color--heading__black: $color--black;
+$color--heading__Gray: $color--gray;
+$color--offre__blue: $color--seconde;
+$color--new__gray: $color--seconde;
+$color--error: $color--red;
+$color--border: #dfe5e8;
+$color--pending__bg: #ffe8d0;
+$color--pending__text: #98530c;
+$color--Canceled__bg: #fdcccc;
+$color--Canceled__text: #920000;
+$color--Received__bg: #ccf0d1;
+$color--Received__text: #006d0e;
+
+$color--status: (
+    pending:(backGround:#ffe8d0,text:#98530c),
+    canceled:(backGround:#fdcccc,text:#920000),
+    received:(backGround:#ccf0d1,text:#006d0e)
+);
+
+
+// ? Font Variables
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// $font--main: Helvetica Neue,Helvetica,Arial,sans-serif;
+$font--main: 'Montserrat', sans-serif;
+$font--seconde: 'Source Sans Pro', sans-serif;
+$font--poppins: 'Poppins', sans-serif;
+$font--heading__main: $font--main;
+$font--paragraph__main: $font--seconde;
+
+// ? Media Query Vriables
+$small: 576px; 
+$medium:768px;
+$large:992px;
+$x--large:1200px;
+$xx--large: 1400px;

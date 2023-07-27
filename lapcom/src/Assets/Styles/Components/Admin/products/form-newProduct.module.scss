@@ -1,0 +1,15 @@
+@import '../../../Helpers/Mixin.scss';
+@import '../../../Helpers/Variables.scss';
+
+form{
+    svg{
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    button{
+        background-color: red;
+    }
+    .select-categorie{
+        height: 100px;
+    }
+}

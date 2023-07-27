@@ -1,0 +1,75 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.check-out__step{
+    &-item{
+        height: 60px;
+        text-align: center;
+        padding: 17px 0 18px 30px;
+        padding-right: 33px;
+        background-color: #e9f0ef;
+        font-size: 16px;
+        font-family: $font--heading__main;
+        font-weight: 700;
+        color: $color--gray__therd;
+
+        &:first-of-type{
+            border-radius: 5px 0 0 5px;
+            position: relative;
+            overflow: hidden;
+
+            &::before,
+            &::after{
+                content: '';
+                position: absolute;
+                right: -23px;
+                width: 46px;
+                height: 46px;
+                transform: rotate(45deg);
+                border: 3px solid #ffffff;
+                background: #ffd453;
+
+                @include For-Tablet(max-width){
+                    display: none;
+                }
+            }
+            &::before{
+                top: -23px;
+            }
+            &::after{
+                bottom: -23px;
+            }
+        }
+        &:nth-of-type(2){
+            color: black;
+            position: relative;
+            overflow: hidden;
+            background-color: #ffd453;
+
+            &::before,
+            &::after{
+                content: '';
+                position: absolute;
+                right: -23px;
+                width: 46px;
+                height: 46px;
+                transform: rotate(45deg);
+                border: 3px solid #ffffff;
+                background: #e9f0ef;
+
+                @include For-Tablet(max-width){
+                    display: none;
+                }
+            }
+            &::before{
+                top: -23px;
+            }
+            &::after{
+                bottom: -23px;
+            }
+        }
+        &:last-of-type{
+            border-radius: 0 5px 5px 0;
+        }
+    }
+}

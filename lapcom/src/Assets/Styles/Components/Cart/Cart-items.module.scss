@@ -1,0 +1,133 @@
+@import '../../Helpers/Variables.scss';
+@import '../../Helpers/Mixin.scss';
+
+
+.navbar__navigation{
+    width: 120px !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .action-navigation{
+        width: 19px;
+    }
+
+    .cart-shop{
+        position: relative;
+        
+        &.cart-black{
+            svg{
+                
+                g{
+                    fill: black;
+                }
+            }
+        }
+        svg{
+            transform: scaleX(-1);
+            g{
+                fill: $color--main;
+            }
+        }
+        .totla-qauntity{
+            width: 16px;
+            height: 16px;
+            background-color: $color--seconde;
+            position: absolute;
+            top: -2px;
+            right: -7px;
+            font-size: 9px;
+            color: white;
+            font-weight: 600;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        &__content{
+            width: 300px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: .4s;
+            opacity: 0;
+            display: inline;
+            z-index: 1000;
+
+            ul{
+                list-style: none !important;
+                padding: 15px !important;
+                margin: 0;
+            }
+            .content-spinner{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .empty-cart{
+                height: 80px;
+                background-color: white;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+
+                p{
+                    font-family: $font--paragraph__main;
+                    color: $color--gray__therd;
+                    margin: 0;
+                }
+            }
+            .cart-bottom{
+                width: 100%;
+                height: 108px;
+                background-color: $color--gray__seconde;
+                padding: 16px 20px;
+
+                &__total{
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: end;
+
+                    span:first-of-type{
+                        color: $color--gray__therd;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                    span:last-of-type{
+                        font-size: 22px;
+                        font-family: $font--main;
+                        font-weight: 300;
+                    }
+                }
+                &__actions{
+                    margin-top: 5px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .button-style{
+                        width: 122px;
+                    }
+                }
+            }
+            @include For-Tablet(max-width){
+                display: none;
+            }
+        }
+
+        @include For-Tablet(min-width){
+            &:hover{
+
+                &>div{
+                    transform: translateY(5px) !important;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @include For-Tablet(max-width){
+        width: 45px !important;
+    }
+}

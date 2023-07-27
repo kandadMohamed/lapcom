@@ -1,0 +1,22 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.profile-form-adresses{
+    
+    input[type='number']{
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+    
+    .btn-submit-adresse{
+        height: 40px;
+        font-size: 11px;
+
+        &::first-letter{
+            text-transform: uppercase;
+        }
+    }
+}

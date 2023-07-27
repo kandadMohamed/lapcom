@@ -1,0 +1,33 @@
+@import '../../../Helpers/Mixin.scss';
+@import '../../../Helpers/Variables.scss';
+
+.bar-filter{
+    font-family: $font--poppins;
+    p{
+        margin: 0;
+        font-size: 14px;
+    }
+    .card{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+
+        &>div{
+            display: flex;
+            align-items: center;
+
+            &>*{
+                margin: 0;
+                margin-right: 10px;
+            }
+            .select-style{
+                &>div{
+                    border-radius: 10px !important;
+                }
+            }
+        }
+        button{
+            padding: 16px 27px;
+        }
+    }
+}

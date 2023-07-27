@@ -1,0 +1,39 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.header-admin{
+    padding: 35px 0;
+
+    form{
+        .input-group{
+            background-color: #fff;
+            border-radius: 0.5rem;
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            width: 60%;
+            
+            input{
+                background-color: white;
+                border: none;
+                height: 45px;
+                box-shadow: none;
+                font-family: $font--poppins; 
+                padding: 0 20px;
+
+                &:focus{
+                    box-shadow: none;
+                }
+                &:placeholder{
+                    font-family: $font--poppins; 
+                }
+            }
+        }
+    }
+}

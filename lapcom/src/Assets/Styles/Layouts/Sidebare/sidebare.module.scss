@@ -1,0 +1,94 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.sidebare-header{
+    padding: 35px 0;
+
+    a{
+        color: black;
+        font-family: 'Poppins';
+        text-decoration: none;
+        font-size: 26px;
+        font-weight: 800;
+
+        img{
+            width: 40px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.sidebare-body{
+    .sidebare-user{
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 15px;
+
+        .user-name{
+            color: $color--seconde;
+            font-weight: 700!important;
+        }
+        .user-role{
+            color: #6c757d!important;
+            font-size: .87em;
+        }
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+
+        .menu-divider{
+            display: block;
+            padding: 0px 0px 45px 14px;
+            margin-top: 10px;
+            font-size: 12px;
+            opacity: .6;
+        }
+        .menu-item{
+            margin-bottom: 20px;
+
+            &__active{
+                color: $color--seconde !important;
+            }
+            a, div{
+                padding: 10px 25px;
+                color: #000;
+                align-items: center;
+                font-size: 15px;
+                text-decoration: none;
+                font-family: $font--poppins;
+                font-weight: 400;
+                cursor: pointer;
+                svg{
+                    margin-right: 20px;
+                    font-size: 20px;
+                    transition: .3s;
+                    &:not(:first-of-type){
+                        font-size: 13px;
+                        margin-left: 20px;
+                        font-weight: 300;
+                    }
+                }
+                &:hover{
+                    color: $color--seconde;
+
+                    svg{
+                        &:first-of-type{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+
+            ul{
+                padding-top: 10px;
+                li{
+                    a{
+                        padding: 6px 65px;
+                    }
+                }
+            }
+        }
+    }
+}

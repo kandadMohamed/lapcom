@@ -1,0 +1,41 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.main-content{
+    min-height: 300px;
+    margin-top: 200px;
+
+    .page-breadcrumbs{
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $font--seconde;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        a{
+            color: $color--gray__therd;
+            text-decoration: none;
+            transition: .3s;
+
+            &:hover{
+                color: $color--seconde;
+            }
+        }
+        svg{
+            color: $color--gray__therd;
+            margin: 0 10px;
+            font-size: 11px;
+        }
+        span{
+            color: black;
+        }
+    }
+    .row{
+        justify-content: space-between;
+
+        @include For-Desktop(max-width){
+            justify-content: center !important;
+        }
+    }
+}

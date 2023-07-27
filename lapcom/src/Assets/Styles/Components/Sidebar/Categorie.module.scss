@@ -1,0 +1,36 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.sidebar__categorie{
+    margin-bottom: 60px;
+    ul{
+        padding: 0 !important;
+        background-color: white;
+        border: 1px solid $color--border;
+        list-style: square inside ;
+
+        li{
+            padding: 12px;
+            background-color: $color--gray__fourth;
+            border-bottom: 1px solid $color--border;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $font--seconde;
+            color: #5f727f;
+            cursor: pointer;
+
+            &::marker{
+                color: $color--seconde;
+            }
+
+            &:first-of-type{
+                list-style: none;
+                padding: 12px;
+                background-color: white;
+                color: $color--seconde;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+    }
+}

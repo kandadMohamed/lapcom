@@ -1,0 +1,129 @@
+@import '../Helpers/Mixin.scss';
+@import '../Helpers/Variables.scss';
+
+.header-page{
+
+    .header__desc{
+        text-align: right;
+        margin-top: 10px;
+        position: absolute;
+        right: 0;
+        top: 200px;
+        width: 100%;
+        color: white;
+    
+        h2{
+            font-size: 55px;
+            font-weight: 200;
+            text-transform: uppercase;
+            
+            span{
+                font-weight: 600;
+            }
+    
+            @include For-Tablet(max-width){
+                font-size: 50px;
+            }
+        }
+    }
+    
+    .breadcrumbs{
+        width: 100%;
+        text-align: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: $font--seconde;
+    
+        .container{
+            display: flex !important;
+            align-items: center;
+            justify-content: end;
+        }
+    
+        a{
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+    
+            &:hover{
+                color: $color--seconde;
+            }
+        }
+        svg{
+            color: white;
+            margin: 0 10px;
+        }
+        span{
+            color: $color--seconde;
+            border-bottom: 3px solid $color--seconde;
+            padding: 10px 0;
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.checkout__title{
+    font-size: 36px;
+    font-family: $font--main;
+    font-weight: 300;
+    
+    @include For-Tablet(max-width){
+        font-size: 30px;
+    }
+
+    svg{
+        margin-right: 30px;
+    }
+}
+
+.profile-pages-heading{
+    background-color: $color--gray__fourth;
+    padding: 10px 0;
+    padding-left: 20px !important;
+    margin-bottom: 20px;
+
+    p{
+        margin: 0;
+        font-weight: 400;
+        font-family: $font--seconde;
+        &::first-letter{
+            text-transform: uppercase;
+        }
+        b{
+            color: $color--seconde;
+        }
+    }
+}
+
+.UseAuthPointer{
+    cursor: pointer;
+}
+.user-not-auth-allowed{
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: rgb(242, 242, 242) !important;
+    color: rgb(191, 191, 191) !important;
+    border-color: transparent !important;
+    
+    &:hover{
+        background-color: green !important;
+    }
+}
+
+h6.admin-heading{
+    font-size: 18px;
+    color: black;
+    font-family: $font--poppins;
+    margin-bottom: 30px;
+
+    span{
+        color: $color--seconde;
+        font-weight: 600;
+        margin-left: 4px;
+    }
+}

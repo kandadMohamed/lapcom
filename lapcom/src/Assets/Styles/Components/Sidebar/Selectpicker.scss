@@ -1,0 +1,51 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.css-b62m3t-container{
+    margin-bottom: 14px;
+    
+    .css-1s2u09g-control,
+    .css-1pahdxg-control{
+        border-radius: 0 !important;
+        border-color: $color--border !important;
+        box-shadow: none !important;
+        height: 38px !important;
+        
+        .css-14el2xx-placeholder,
+        .css-qc6sy-singleValue{
+            font-family: $font--seconde !important;
+            font-size: 16px;
+            font-weight: 400;
+            color: #99A9B2;
+        }
+        .css-1okebmr-indicatorSeparator{
+            display: none;
+        }
+    }
+    .css-26l3qy-menu{
+        display: block !important;
+        border-radius: 0 !important;
+        box-shadow: none;
+        border: 1px solid $color--border !important;
+        padding: 0;
+
+        div[class$="option"]{
+            font-family: $font--seconde !important;
+            font-size: 16px;
+            font-weight: 400;
+            color: #5d5d5d;
+
+            &:hover{
+                background-color: $color--seconde;
+                color: white;
+            }
+        }
+
+        .css-41jt47-MenuList{
+            padding: 0 !important;
+            div{
+                color: red !important;
+            }
+        }
+    }
+}

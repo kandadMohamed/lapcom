@@ -1,0 +1,34 @@
+@import './Assets/Styles/Helpers/Variables.scss';
+@import './Assets/Styles/Helpers/Mixin.scss';
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  // height: 2000px;
+
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font--main !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container-fluid{
+  &:not(.fluid){
+    padding: 0 37px !important;
+  
+    @include For-Tablet(max-width){
+      padding: 0 21px !important;
+    }
+  }
+}
+

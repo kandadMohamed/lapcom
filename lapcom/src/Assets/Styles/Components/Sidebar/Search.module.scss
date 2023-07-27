@@ -1,0 +1,22 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.sidebar__search{    
+    margin-bottom: 60px;
+
+    form{
+        display: flex;
+        position: relative;
+
+        button{
+            width: 37px;
+            position: absolute;
+            top: 1px;
+            right: 3px;
+            background: none;
+            border: none;
+            outline: none;
+            color: $color--border;
+        }
+    }
+}

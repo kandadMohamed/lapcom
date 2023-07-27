@@ -1,0 +1,51 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.order-track-content{
+    padding: 20px;
+    background-color: $color--gray__fourth;
+
+    .order-track{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        &__item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__etat{
+                font-size: 30px;
+                color: $color--seconde;
+                position: relative;
+
+                svg{
+                    z-index: 100;
+                }
+                span{
+                    height: 10px;
+                    width: 226px !important;
+                    position: absolute;
+                    top: 50%;
+                    right: 96%;
+                    transform: translateY(-50%);
+                }
+                &.order-completed{
+                    color: $color--seconde;
+
+                    span{
+                        background-color: $color--seconde;
+                    }
+                }
+                &.order-incompleted{
+                    color: $color--gray__heading;
+
+                    span{
+                        background-color: $color--gray__heading;
+                    }
+                }
+
+            }
+        }   
+    }
+}

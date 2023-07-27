@@ -1,0 +1,133 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+.order-received-main{
+    margin: 35px 0 40px 0;
+    padding: 35px 0 40px 0;
+    font-family: $font--seconde;
+    font-size: 16px;
+    color: $color--gray__heading;
+
+    p{
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin-bottom: 50px;
+        li{
+            margin-bottom: 10px;
+            span{
+                margin-right: 10px;
+                color: $color--seconde;
+            }
+        }
+    }
+    h2{
+        color: black;
+        margin-bottom: 40px;
+    }
+    table{
+        width: 100%;
+        border: 1px solid $color--border;
+        margin-bottom: 20px;
+
+        &.order-derails{
+
+            thead{
+                background-color: #b6c6c9;
+
+                td{
+                    padding: 17px;
+                    color: white;
+                    font-size: 16px;
+                    font-family: $font--main;
+                    font-weight: 700;
+
+                    &:first-of-type{
+                        padding-left: 37px;
+                    }
+                    &:nth-of-type(2){
+                        text-align: center;
+                    }
+                    @media screen and (max-width: 380px) {
+                        font-size: 14px;
+                    }
+                    @media screen and (max-width: 360px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        padding: 10px 17px;
+                        height: 82px;
+                        .order-product-img{
+                            display: inline-block;
+                            width: 50px;
+                            margin-right: 10px;
+                            
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        h4{
+                            margin: 0;
+                            font-size: 20px;
+                            color: #3c3950;
+                            font-family: $font--seconde;
+                            font-weight: 300;
+                        }
+                        a{
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            font-family: $font--seconde;
+                            font-weight: 500;
+                            color: $color--seconde;
+                        }
+                        &:first-of-type{
+                            padding-left: 25px;
+                        }
+                        &:last-of-type{
+                            font-size: 22px;
+                            font-family: $font--seconde;
+                            font-weight: 300;
+                        }
+                        &:nth-of-type(2){
+                            text-align: center;
+                        }
+                        &.total{
+                            font-size: 30px;
+                            font-weight: 300;
+                        }
+                    }
+                    &:not(:last-of-type){
+                        border-bottom: 1px solid $color--border;
+                    }
+                }
+            }
+        }
+        &.cart-total{
+            tbody{
+                tr{
+                    border-bottom: 1px solid $color--border;
+                    td{
+                        width: 50%;
+                        padding: 10px 20px;
+                        font-family: $font--seconde;
+                        font-size: 20px;
+                        font-weight: 300;
+    
+                        &:first-of-type{
+                            border-right: 1px solid $color--border;
+                            background: $color--gray__fourth;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

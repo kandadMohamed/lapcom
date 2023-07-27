@@ -1,0 +1,206 @@
+@import '../../../Helpers/Mixin.scss';
+@import '../../../Helpers/Variables.scss';
+
+
+.products-admin{
+    
+    table{
+        border-collapse: separate !important;
+        border-spacing: 0 15px;
+        
+        input{
+            &[type='checkbox']{
+                border-radius: 0.25em;
+            }
+            width: 1.2em;
+            height: 1.2em;
+            margin-top: 0.15em;
+            vertical-align: top;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: contain;
+            border: 1px solid rgba(0,0,0,.25);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            // -webkit-print-color-adjust: exact;
+            // color-adjust: exact;
+            -webkit-transition: background-color .15s ease-in-out,background-position .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+            transition: background-color .15s ease-in-out,background-position .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+            transition: background-color .15s ease-in-out,background-position .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: background-color .15s ease-in-out,background-position .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    
+            &:checked {
+                background-color: $color--seconde !important;
+                border-color: $color--seconde !important;
+            }
+            &:focus{
+                box-shadow: none !important;
+            }
+        }
+    
+        thead{
+            th{
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 1px;
+                font-weight: 500;
+    
+                font-family: $font--poppins;
+                border: none;
+                padding-bottom: 20px;
+            }
+        }
+        tbody {
+            border: none !important;
+            font-family: $font--poppins;
+            tr {
+                background: white;
+    
+                td {
+                    border-top: 1px solid transparent;
+                    border-bottom: 1px solid transparent;
+                    padding: 1.3rem .75rem !important;
+                    font-size: 13px;
+                    vertical-align: middle;
+    
+                    &:first-child {
+                        border-left: 1px solid transparent;
+                    }
+    
+                    &:last-child {
+                        border-right: 1px solid transparent;
+    
+                        .dropdown-menu {
+                            margin-top: 10px;
+                            // visibility: hidden;
+                            // opacity: 0;
+                            // height: 0;
+                            min-width: 13rem;
+                            border: none;
+                            box-shadow: 0 0 50px 0 rgba(82, 63, 105, .15) !important;
+                        
+                            // &.dropdown-menu-big {
+                            //     padding: 0;
+                            //     width: 330px;
+                            // }
+                        
+                            // .dropdown-menu-body {
+                            //     max-height: 400px;
+                            //     overflow: auto;
+                            // }
+                        
+                            // .dropdown-menu-title {
+                            //     background-color: $color--seconde;
+                            //     padding: 15px 20px;
+                            //     color: white;
+                            //     background-size: cover !important;
+                            //     background-position: center !important;
+                            // }
+                        
+                            // .dropdown-menu-footer {
+                            //     padding: 10px 20px;
+                            // }
+                        
+                            // ul {
+                            //     li {
+                            //         &.dropdown-menu-title {
+                            //             background: red;
+                        
+                            //             &:first-child {
+                            //                 margin-top: 0;
+                            //             }
+                        
+                            //             margin: 5px 0;
+                            //             padding: 0px 20px 5px;
+                            //             border-bottom: 1px solid #ebebeb
+                            //         }
+                            //     }
+                            // }
+                        
+                            .dropdown-item {
+                                padding: 8px 25px;
+                                font-size: .875rem;
+                        
+                                &:hover, &:focus, &:active {
+                                    background: none;
+                                    text-decoration: none;
+                                    color: $color--seconde
+                                }
+                            }
+                        }
+    
+                        &>div{
+                            padding-right: 21px;
+                        }
+                        span{
+                            cursor: pointer;
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+    
+                    &:nth-of-type(2){
+                        a{
+                            color: $color--seconde;
+                            text-decoration: none;
+                        }
+                    }
+                }
+    
+                &.tr-selected {
+                    td {
+                        border-color: $color--seconde !important;
+                    }
+                }
+    
+                td {
+    
+                    &:first-child {
+                        border-top-left-radius: .50rem;
+                        border-bottom-left-radius: .50rem;
+                        padding-left: 15px;
+                    }
+    
+                    &:last-child {
+                        border-top-right-radius: .50rem;
+                        border-bottom-right-radius: .50rem;
+                        padding-right: 15px;
+                    }
+                }
+    
+                &:last-child {
+                    td {
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container-paginate{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    li{
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        font-size: 16px;
+        margin-left: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            color: $color--seconde !important;
+            font-weight: 600;
+        }
+    }
+}

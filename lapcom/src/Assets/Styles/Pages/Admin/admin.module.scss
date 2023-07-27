@@ -1,0 +1,16 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+// body{
+//     background-color: #f5f4fe !important;
+// }
+
+.admin-page-content{
+    width: 100%;
+    background-color: #f5f4fe;
+    height: 100vh;
+
+    .row-admin{
+        justify-content: space-between;
+    }
+}

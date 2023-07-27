@@ -1,0 +1,61 @@
+@import '../Helpers/Mixin.scss';
+@import '../Helpers/Variables.scss';
+
+$color--alert: (
+    info:(
+        backGround: $color--gray__fourth,
+        text: $color--gray__heading
+    ),
+    error:(
+        backGround:#fdcccc,
+        text: $color--red__error
+    )
+);
+
+.alert-message{
+    width: 100%;
+    // height: 100px;
+    padding: 10px 40px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+
+    &>span{
+        box-sizing: content-box;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color--red__error;
+        border-radius: 50%;
+        color: white;
+        margin-right: 20px;
+        border: 7px solid white;
+        font-size: 20px;
+    }
+    p{
+        margin: 0;
+        font-size: 20px;
+        font-family: $font--seconde;
+
+        &::first-letter{
+            text-transform: uppercase !important;
+        }
+        span{
+            font-weight: 600;
+        }
+    }
+
+    @each $alertItem, $alertBg in $color--alert {
+        &.alert-#{$alertItem} {
+            background-color: map-get($alertBg, backGround) !important;
+            color: map-get($alertBg, text) !important;
+
+            &>span{
+                background-color: map-get($alertBg, text) !important;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,63 @@
+@import '../../Helpers/Mixin.scss';
+@import '../../Helpers/Variables.scss';
+
+
+.menu-item{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__active{
+        color: $color--seconde!important;
+        background-color: rgba($color: $color--seconde, $alpha: .38);
+        border-radius: 10px;
+        border-left: 4px solid $color--seconde;
+    }
+    a, div{
+        width: 100%;
+        padding: 10px 25px;
+        color: #000;
+        align-items: center;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: $font--poppins;
+        font-weight: 400;
+        cursor: pointer;
+        svg{
+            margin-right: 20px;
+            font-size: 20px;
+            transition: .3s;
+        }
+        &>svg{
+            font-size: 13px;
+            margin-left: 20px;
+            font-weight: 300;
+        }
+        &:hover{
+            color: $color--seconde;
+            
+            span{
+                svg{
+                    &:first-of-type{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        &::first-letter{
+            text-transform: uppercase;
+        }
+    }
+
+    ul{
+        padding-top: 10px;
+        li{
+            a{
+                padding: 10px 65px;
+                &::first-letter{
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
